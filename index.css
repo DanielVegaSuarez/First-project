@@ -45,6 +45,14 @@ body {
 }
 
 
+#player {
+background-color: brown;
+width: 8%;
+height: 25%;
+position: relative;
+
+}
+
 @media (max-width: 1500px) {
     #board {
         height: 40vw;
