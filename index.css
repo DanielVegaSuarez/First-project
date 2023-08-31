@@ -1,0 +1,58 @@
+body {
+    background-color: grey;
+    display: flex;
+    gap: 4em;
+    margin: 5em;
+
+}
+
+#board {
+    width: 1200px;
+    height: 800px;
+    background-color: aqua;
+    min-width: 700px;
+    min-height: 400px;
+    border-radius: 30px;
+}
+
+#info {
+    background-color: red;
+    width: 400px;
+    height: 800px;
+    min-width: 180px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    border-radius: 30px;
+}
+
+#playerinfo {
+    background-color: blue;
+    width: 80%;
+    height: 30%;
+    border-radius: 10px 100px / 120px;
+
+}
+
+#stageinfo {
+    background-color: blue;
+    width: 80%;
+    height: 50%;
+    border-radius: 70px 10px / 120px;
+}
+
+
+@media (max-width: 1500px) {
+    #board {
+        height: 40vw;
+    }
+
+    #info {
+        height: 40vw;
+    }
+
+
+}
