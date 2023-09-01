@@ -65,7 +65,7 @@ body {
   position: relative;
 }
 
-@keyframes jump {
+/* @keyframes jump {
   0% {
     top: 500px;
     left: 150px;
@@ -78,4 +78,4 @@ body {
     top: 500px;
     left: 150px;
   }
-}
+} */

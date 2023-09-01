@@ -6,6 +6,7 @@ const obstacle = new Obstacle(1100, 500, player)
 
 
 player.createPlayer()
+
 function obstacleLoop (){
     obstacle.createObstacle()
    /*  obstacle.movement() */
