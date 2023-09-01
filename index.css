@@ -54,6 +54,15 @@ body {
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
 }
+
+.obstacle {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(7, 116, 218);
+  position: relative;
+}
+
+
 @keyframes jump {
   0% {
     top: 60%;

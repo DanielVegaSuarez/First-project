@@ -2,7 +2,7 @@ import { Player } from "./components/Player.js"
 import { Obstacle } from "./components/Obstacle.js"
 
 const player = new Player(60, 10);
-const obstacle = new Obstacle(60,100)
+const obstacle = new Obstacle(80,80)
 
 obstacle.createObstacle()
 player.createPlayer()
