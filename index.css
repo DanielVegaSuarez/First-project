@@ -44,6 +44,7 @@ body {
 }
 
 #player {
+  display: inline-block;
   background-color: brown;
   width: 8%;
   height: 25%;
@@ -57,6 +58,7 @@ body {
 }
 
 .obstacle {
+  display: inline-block;
   width: 10%;
   height: 4%;
   background-color: rgb(7, 116, 218);
