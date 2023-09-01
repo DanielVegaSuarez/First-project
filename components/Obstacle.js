@@ -9,8 +9,8 @@ function Obstacle (x, y, player) {
     this.createObstacle = function () {
         let newObstacle = document.createElement("div");
         newObstacle.setAttribute("class", "obstacle");
-        newObstacle.style.top = this.y + "%";
-        newObstacle.style.left = this.x + "%";
+        newObstacle.style.top = this.y + "px";
+        newObstacle.style.left = this.x + "px";
         this.sprite = newObstacle
         document.querySelector("#board").appendChild(newObstacle)
     }
@@ -18,7 +18,7 @@ function Obstacle (x, y, player) {
     this.movement = function(){
         let timer = setInterval(function(){
             self.sprite.style.left =
-              parseInt(self.sprite.style.left) - self.speed + "%";
+              parseInt(self.sprite.style.left) - self.speed + "px";
         }, 30)
          this.moveTimer = timer
     }
