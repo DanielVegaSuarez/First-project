@@ -6,6 +6,7 @@ const obstacle = new Obstacle(100, 85)
 
 obstacle.createObstacle()
 player.createPlayer()
+obstacle.movement()
 window.onkeydown = player.jump
 
 
