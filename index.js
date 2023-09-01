@@ -8,11 +8,13 @@ player.createPlayer()
 function obstacleLoop (){
     obstacle.createObstacle()
     obstacle.movement()
-    setInterval(()=>{
+    let timer = setInterval(()=>{
         if(parseInt(obstacle.sprite.style.left) + 18 <= 0){
             obstacle.removeObstacle()
+            clearInterval(timer)
         }
     }, 25)
+    
 }
 obstacleLoop()
 
