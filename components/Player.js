@@ -7,8 +7,8 @@ function Player(x, y) {
   this.createPlayer = function () {
     let newPlayer = document.createElement("div");
     newPlayer.setAttribute("id", "player");
-    newPlayer.style.top = this.y + "%";
-    newPlayer.style.left = this.x + "%";
+    newPlayer.style.top = this.y + "px";
+    newPlayer.style.left = this.x + "px";
     this.sprite = newPlayer;
     document.querySelector("#board").appendChild(newPlayer);
   };
