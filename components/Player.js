@@ -3,6 +3,8 @@ function Player(x, y) {
   this.x = x;
   this.y = y;
   this.sprite;
+  this.width = 100;
+  this.height = 200;
   this.isJumping = false;
   this.isGoingUp = true;
 

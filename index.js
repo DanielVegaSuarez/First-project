@@ -9,7 +9,7 @@ player.createPlayer()
 
 function obstacleLoop (){
     obstacle.createObstacle()
-   /*  obstacle.movement() */
+    obstacle.movement() 
     let collisionTime = setInterval(obstacle.checkCollision, 30);
     let timer = setInterval(()=>{
         if(parseInt(obstacle.sprite.style.left) + 18 <= 0){
