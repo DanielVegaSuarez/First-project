@@ -4,6 +4,7 @@ function Obstacle (x, y) {
     this.y = y
     this.speed = 1
     this.sprite
+    this.moveTimer
 
     this.createObstacle = function () {
         let newObstacle = document.createElement("div");
@@ -18,8 +19,15 @@ function Obstacle (x, y) {
         let timer = setInterval(function(){
             self.sprite.style.left =
               parseInt(self.sprite.style.left) - self.speed + "%";
-        }, 30)
+        }, 100)
+         this.moveTimer = timer
     }
+
+    this.removeObstacle = function () {
+        document.querySelector("#board").removeChild(this.sprite)
+        clearInterval(this.moveTimer)
+    }
+    
 }
 
 export { Obstacle }
