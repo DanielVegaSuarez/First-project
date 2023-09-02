@@ -10,13 +10,15 @@ body {
   height: 800px;
   background-color: rgba(0, 255, 255, 0.349);
   border-radius: 30px;
-  position: relative
-    /* overflow: hidden; */
+  position: relative;
+  overflow: hidden; 
 }
 #landscape{
-  width: 1300px;
+  width: 1800px;
   height: 400px;
-  background-color: blue;
+  background-image: url('./assets/17031611.jpeg');
+  background-size: contain;
+  
   position: absolute;
   z-index: -1;
 }

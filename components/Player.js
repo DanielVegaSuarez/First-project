@@ -1,5 +1,5 @@
 const landscape = document.querySelector('#landscape')
-landscape.style.left = '40px'
+landscape.style.left = '0px'
 function Player(x, y, board) {
   let self = this;
   this.x = x;
@@ -47,9 +47,9 @@ function Player(x, y, board) {
     if(e.key === 'd' && !self.isJumping){
       
       self.sprite.classList.add('player-movement')
-      landscape.style.left = parseInt(landscape.style.left) - 10 + 'px'
-      if(parseInt(landscape.style.left)<= -560){
-        landscape.style.left = '40px'
+      landscape.style.left = parseInt(landscape.style.left) - 5 + 'px'
+      if(parseInt(landscape.style.left)<= -640){
+        landscape.style.left = '0px'
       }
 
     }
