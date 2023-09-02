@@ -13,6 +13,8 @@ function Player(x, y) {
     newPlayer.setAttribute("id", "player");
     newPlayer.style.top = this.y + "px";
     newPlayer.style.left = this.x + "px";
+    this.x = parseInt(newPlayer.style.left)
+    this.y = parseInt(newPlayer.style.top)
     this.sprite = newPlayer;
     document.querySelector("#board").appendChild(newPlayer);
   };
