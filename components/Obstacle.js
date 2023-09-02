@@ -11,11 +11,11 @@ function Obstacle(x, y, player) {
   this.createObstacle = function () {
     let newObstacle = document.createElement("div");
     newObstacle.setAttribute("class", "obstacle");
-    newObstacle.style.top = this.y + "px";
-    newObstacle.style.left = this.x + "px";
-    this.sprite = newObstacle;
-    this.x = parseInt(this.sprite.style.top);
-    document.querySelector("#board").appendChild(this.sprite);
+    newObstacle.style.top = self.y + "px";
+    newObstacle.style.left = self.x + "px";
+    self.sprite = newObstacle;
+    self.x = parseInt(self.sprite.style.top);
+    document.querySelector("#board").appendChild(self.sprite);
   };
 
   this.movement = function () {
@@ -28,8 +28,9 @@ function Obstacle(x, y, player) {
   };
 
   this.removeObstacle = function () {
-    document.querySelector("#board").removeChild(this.sprite);
-    clearInterval(this.moveTimer);
+  
+    document.querySelector("#board").removeChild(self.sprite);
+    clearInterval(self.moveTimer);
   };
 
   this.checkCollision = function () {
