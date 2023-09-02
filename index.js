@@ -10,14 +10,15 @@ player.createPlayer()
 function obstacleLoop (){
     obstacle.createObstacle()
     obstacle.movement() 
-    let collisionTime = setInterval(obstacle.checkCollision, 30);
+    let collisionTimer = setInterval(obstacle.checkCollision, 30);
     let timer = setInterval(()=>{
-        if(parseInt(obstacle.sprite.style.left) + 18 <= 0){
+        if(parseInt(obstacle.sprite.style.left) + parseInt(player.width) + obstacle.width <= 0){
+            
             obstacle.removeObstacle()
-            clearInterval(collisionTime)
+            clearInterval(collisionTimer)
             clearInterval(timer)
         }
-    }, 25)
+    }, 10)
     
 }
 obstacleLoop()

@@ -14,6 +14,7 @@ function Obstacle(x, y, player) {
     newObstacle.style.top = this.y + "px";
     newObstacle.style.left = this.x + "px";
     this.sprite = newObstacle;
+    this.x = parseInt(this.sprite.style.top);
     document.querySelector("#board").appendChild(this.sprite);
   };
 
@@ -21,7 +22,7 @@ function Obstacle(x, y, player) {
     let timer = setInterval(function () {
       self.sprite.style.left =
         parseInt(self.sprite.style.left) - self.speed + "px";
-        self.x = self.sprite.style.left;
+      self.x = parseInt(self.sprite.style.left);
     }, 5);
     this.moveTimer = timer;
   };
@@ -32,38 +33,12 @@ function Obstacle(x, y, player) {
   };
 
   this.checkCollision = function () {
-    // Coordenadas del jugador y el obstáculo
-    const playerX = player.x;
-    const playerY = player.y;
-    const obstacleX = parseInt(self.x); 
-    const obstacleY = parseInt(self.y);
-  
-    // Dimensiones del jugador y el obstáculo
-    const playerWidth = player.width;
-    const playerHeight = player.height;
-    const obstacleWidth = self.width;
-    const obstacleHeight = self.height;
-  
-    // Calcula los límites de los dos objetos
-    const playerLeft = playerX;
-    const playerRight = playerX + playerWidth;
-    const playerTop = playerY;
-    const playerBottom = playerY + playerHeight;
-  
-    const obstacleLeft = obstacleX;
-    const obstacleRight = obstacleX + obstacleWidth;
-    const obstacleTop = obstacleY;
-    const obstacleBottom = obstacleY + obstacleHeight;
-  
-    // Comprueba si hay colisión
     if (
-      playerRight >= obstacleLeft &&
-      playerLeft <= obstacleRight &&
-      playerBottom >= obstacleTop &&
-      playerTop <= obstacleBottom
+      self.x <= player.x &&
+      self.x >= -50 &&
+      player.y >= self.y - self.height
     ) {
-      console.log("Colisión detectada");
-      // Realiza aquí las acciones necesarias en caso de colisión
+      console.log("collision");
     }
   };
 }
