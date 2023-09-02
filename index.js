@@ -6,9 +6,9 @@ const obstacles = [];
 player.createPlayer();
 
 function obstacleLoop() {
-  let newObstacle = new Obstacle(1150, 680, player);
+  let newObstacle = new Obstacle(1100, 680, player);
   obstacles.push(newObstacle);
-    console.log(obstacles)
+    
     
     newObstacle.createObstacle();
     newObstacle.movement();
@@ -23,6 +23,6 @@ function obstacleLoop() {
     }, 10);
   ;
 }
-let obstacleGenerator = setInterval(obstacleLoop, 2000);
+let obstacleGenerator = setInterval(obstacleLoop, 5000);
 
 window.onkeydown = player.jump;
