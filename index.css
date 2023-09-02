@@ -12,8 +12,9 @@ body {
   min-width: 700px;
   min-height: 400px;
   border-radius: 30px;
-/*   overflow: hidden;
- */}
+  /*   overflow: hidden;
+ */
+}
 
 #info {
   background-color: red;
@@ -51,12 +52,6 @@ body {
   position: relative;
 }
 
-.jump {
-  animation-name: jump;
-  animation-timing-function: ease-in-out;
-  animation-duration: 1s;
-}
-
 .obstacle {
   display: inline-block;
   width: 100px;
@@ -64,4 +59,3 @@ body {
   background-color: rgb(7, 116, 218);
   position: relative;
 }
-
