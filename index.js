@@ -1,7 +1,7 @@
 import { Player } from "./components/Player.js";
 import { Obstacle } from "./components/Obstacle.js";
-
-const player = new Player(150, 500);
+const board = document.querySelector('#board')
+const player = new Player(150, 500, board);
 const obstacles = [];
 player.createPlayer();
 
