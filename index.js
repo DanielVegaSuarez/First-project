@@ -23,7 +23,7 @@ function obstacleLoop() {
     }, 10);
   ;
 }
-let obstacleGenerator = setInterval(obstacleLoop, 5000);
+let obstacleGenerator = setInterval(obstacleLoop, 3000);
 
 window.onkeydown = player.interaction;
 window.onkeyup = player.stop
