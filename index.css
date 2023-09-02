@@ -65,17 +65,3 @@ body {
   position: relative;
 }
 
-/* @keyframes jump {
-  0% {
-    top: 500px;
-    left: 150px;
-  }
-  50% {
-    top: 300px;
-    left: 150px;
-  }
-  100% {
-    top: 500px;
-    left: 150px;
-  }
-} */

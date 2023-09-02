@@ -2,6 +2,8 @@ function Obstacle(x, y, player) {
   let self = this;
   this.x = x;
   this.y = y;
+  this.width = 100;
+  this.height = 20;
   this.speed = 1;
   this.sprite;
   this.moveTimer;
@@ -12,15 +14,16 @@ function Obstacle(x, y, player) {
     newObstacle.style.top = this.y + "px";
     newObstacle.style.left = this.x + "px";
     this.sprite = newObstacle;
-    document.querySelector("#board").appendChild(newObstacle);
+    this.x = parseInt(this.sprite.style.top);
+    document.querySelector("#board").appendChild(this.sprite);
   };
 
   this.movement = function () {
     let timer = setInterval(function () {
       self.sprite.style.left =
         parseInt(self.sprite.style.left) - self.speed + "px";
-        self.x = self.sprite.style.left;
-    }, 30);
+      self.x = parseInt(self.sprite.style.left);
+    }, 5);
     this.moveTimer = timer;
   };
 
@@ -30,7 +33,13 @@ function Obstacle(x, y, player) {
   };
 
   this.checkCollision = function () {
-    
+    if (
+      self.x <= player.x &&
+      self.x >= -50 &&
+      player.y >= self.y - self.height
+    ) {
+      console.log("collision");
+    }
   };
 }
 
