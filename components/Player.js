@@ -18,7 +18,7 @@ function Player(x, y) {
     this.sprite = newPlayer;
     document.querySelector("#board").appendChild(newPlayer);
   };
-  this.jump = function (e) {
+  this.interaction = function (e, test) {
     if (e.key === " " && self.isJumping === false) {
       let timerUp = setInterval(function () {
         self.isJumping = true;
@@ -40,7 +40,13 @@ function Player(x, y) {
         }
       }, 20);
     }
+    if(e.key === 'd'){
+      self.sprite.classList.add('player-movement')
+    }
   };
+  this.stop = function(e){
+    self.sprite.classList.remove('player-movement')
+  }
 }
 
 export { Player };

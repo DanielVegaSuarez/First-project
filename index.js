@@ -25,4 +25,5 @@ function obstacleLoop() {
 }
 let obstacleGenerator = setInterval(obstacleLoop, 5000);
 
-window.onkeydown = player.jump;
+window.onkeydown = player.interaction;
+window.onkeyup = player.stop

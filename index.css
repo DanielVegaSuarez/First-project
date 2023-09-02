@@ -61,3 +61,26 @@ body {
   background-color: rgb(7, 116, 218);
   position: absolute;
 }
+
+.player-movement{
+  animation: movement 2s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0%{
+    background-color: red;
+  }
+  25%{
+    background-color: violet;
+  }
+  50%{
+    background-color: blue;
+  }
+  75%{
+    background-color: black;
+  }
+  100%{
+    background-color: red;
+  }
+}
