@@ -1,7 +1,7 @@
 import { Player } from "./components/Player.js";
 import { Obstacle } from "./components/Obstacle.js";
-
-const player = new Player(150, 500);
+const board = document.querySelector('#board')
+const player = new Player(150, 500, board);
 const obstacles = [];
 player.createPlayer();
 
@@ -23,6 +23,7 @@ function obstacleLoop() {
     }, 10);
   ;
 }
-let obstacleGenerator = setInterval(obstacleLoop, 5000);
+let obstacleGenerator = setInterval(obstacleLoop, 3000);
 
-window.onkeydown = player.jump;
+window.onkeydown = player.interaction;
+window.onkeyup = player.stop

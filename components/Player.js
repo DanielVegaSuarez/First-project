@@ -1,4 +1,6 @@
-function Player(x, y) {
+const landscape = document.querySelector('#landscape')
+landscape.style.left = '0px'
+function Player(x, y, board) {
   let self = this;
   this.x = x;
   this.y = y;
@@ -18,11 +20,12 @@ function Player(x, y) {
     this.sprite = newPlayer;
     document.querySelector("#board").appendChild(newPlayer);
   };
-  this.jump = function (e) {
+  this.interaction = function (e) {
     if (e.key === " " && self.isJumping === false) {
+      
       let timerUp = setInterval(function () {
         self.isJumping = true;
-
+        
         if (self.isGoingUp && self.y >=300) {
           self.sprite.style.top = parseInt(self.sprite.style.top) - 5 + "px";
           self.y = parseInt(self.sprite.style.top);
@@ -36,11 +39,25 @@ function Player(x, y) {
             self.isGoingUp = true;
             clearInterval(timerUp);
             self.isJumping = false;
+            
           }
         }
       }, 20);
     }
+    if(e.key === 'd' && !self.isJumping){
+      
+      self.sprite.classList.add('player-movement')
+      landscape.style.left = parseInt(landscape.style.left) - 5 + 'px'
+      if(parseInt(landscape.style.left)<= -640){
+        landscape.style.left = '0px'
+      }
+
+    }
   };
+  this.stop = function(e){
+    self.sprite.classList.remove('player-movement')
+  
+  }
 }
 
 export { Player };
