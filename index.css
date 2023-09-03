@@ -13,20 +13,20 @@ body {
   position: relative;
   overflow: hidden;
 }
-#landscape{
+#landscape {
   width: 1800px;
   height: 650px;
-  background-image: url('./assets/17031611.jpeg');
-  background-size: contain;  
+  background-image: url("./assets/17031611.jpeg");
+  background-size: contain;
   position: absolute;
   z-index: -1;
 }
 
-#landscape2{
+#landscape2 {
   width: 1800px;
   height: 150px;
-  background-image: url('./assets/17031611.jpeg');
-  background-size: contain;  
+  background-image: url("./assets/17031611.jpeg");
+  background-size: contain;
   position: absolute;
   top: 650px;
   z-index: -1;
@@ -61,7 +61,7 @@ body {
   height: 50%;
   border-radius: 70px 10px / 120px;
 }
-#timer{
+#timer {
   display: flex;
   margin-top: 30px;
   border-radius: 20px;
@@ -74,7 +74,7 @@ body {
 }
 #player {
   display: inline-block;
-  background-color: brown;
+  background-color: transparent;
   width: 100px;
   height: 200px;
   position: absolute;
@@ -89,25 +89,32 @@ body {
   position: absolute;
 }
 
-.player-movement{
-  animation: playerMovement 2s linear;
+.player-movement {
+  animation: playerMovement 0.8s linear;
   animation-iteration-count: infinite;
+  background-size: 100px 200px;
+  background-repeat: no-repeat;
 }
 
 @keyframes playerMovement {
-  0%{
-    background-color: red;
+  0% {
+    background-image: url("./assets/paso1.png");
   }
-  25%{
-    background-color: violet;
+
+  20% {
+    background-image: url("./assets/otroPaso.png");
   }
-  50%{
-    background-color: blue;
+
+  40% {
+    background-image: url("./assets/otherStep.png");
   }
-  75%{
-    background-color: black;
+  60% {
+    background-image: url("./assets/paso1.png");
   }
-  100%{
-    background-color: red;
+  80% {
+    background-image: url("./assets/otroPaso.png");
+  }
+  100% {
+    background-image: url("./assets/otherStep.png");
   }
 }
