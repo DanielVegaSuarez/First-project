@@ -23,7 +23,7 @@ function Player(x, y) {
   };
   this.interaction = function (e) {
     if (e.key === " " && self.isJumping === false) {
-      
+      self.sprite.style.backgroundImage = 'url(./assets/paso1.png)'
       let timerUp = setInterval(function () {
         self.isJumping = true;
         
@@ -37,6 +37,7 @@ function Player(x, y) {
           self.sprite.style.top = parseInt(self.sprite.style.top) + 5 + "px";
           self.y = parseInt(self.sprite.style.top);
           if (self.y === 500) {
+            self.sprite.style.backgroundImage = ''
             self.isGoingUp = true;
             clearInterval(timerUp);
             self.isJumping = false;

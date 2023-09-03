@@ -74,12 +74,18 @@ body {
 }
 #player {
   display: inline-block;
-  background-color: transparent;
+  background-image: url('./assets/otherStep.png');
   width: 100px;
   height: 200px;
   position: absolute;
+  background-size: 100px 200px;
+  background-repeat: no-repeat;
 }
-
+.jump{
+  background-image: url('./assets/paso1.png');
+  background-size: 100px 200px;
+  background-repeat: no-repeat;
+}
 .obstacle {
   display: inline-block;
   width: 100px;
@@ -90,7 +96,7 @@ body {
 }
 
 .player-movement {
-  animation: playerMovement 0.8s linear;
+  animation: playerMovement .5s linear;
   animation-iteration-count: infinite;
   background-size: 100px 200px;
   background-repeat: no-repeat;
@@ -101,20 +107,16 @@ body {
     background-image: url("./assets/paso1.png");
   }
 
-  20% {
+  40% {
     background-image: url("./assets/otroPaso.png");
   }
 
-  40% {
+  80% {
     background-image: url("./assets/otherStep.png");
   }
-  60% {
+
+  100% {
     background-image: url("./assets/paso1.png");
   }
-  80% {
-    background-image: url("./assets/otroPaso.png");
-  }
-  100% {
-    background-image: url("./assets/otherStep.png");
-  }
+ 
 }
