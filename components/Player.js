@@ -1,6 +1,6 @@
 const landscape = document.querySelector('#landscape')
 landscape.style.left = '0px'
-function Player(x, y, board) {
+function Player(x, y) {
   let self = this;
   this.x = x;
   this.y = y;
@@ -9,6 +9,7 @@ function Player(x, y, board) {
   this.height = 200;
   this.isJumping = false;
   this.isGoingUp = true;
+  this.isDead = false;
 
   this.createPlayer = function () {
     let newPlayer = document.createElement("div");
