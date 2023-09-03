@@ -1,5 +1,6 @@
 import { Player } from "./components/Player.js";
 import { Obstacle } from "./components/Obstacle.js";
+
 const board = document.querySelector('#board')
 const gameTimer = document.querySelector('#timer')
 const player = new Player(150, 500, board);
@@ -39,4 +40,5 @@ function startGame(){
   window.onkeyup = player.stop
 }
 startGame()
+
 

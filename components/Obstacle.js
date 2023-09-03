@@ -34,12 +34,12 @@ function Obstacle(x, y, player) {
 
   this.checkCollision = function () {
     if (
-      // self.x <= player.x &&
-      // self.x >= -50 &&
-      // player.y >= self.y - self.height
-      self.x <= player.x + player.width && self.x >= 50 && player.y + player.height >= self.y 
+      self.x <= player.x + player.width &&
+      self.x >= 50 &&
+      player.y + player.height >= self.y
     ) {
-      console.log('colision');
+      
+      player.isDead = true
     }
   };
 }
