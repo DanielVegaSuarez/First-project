@@ -45,14 +45,12 @@ function Player(x, y) {
         }
       }, 20);
     }
-    if(e.key === 'd' && !self.isJumping){
-      
+    if(e.key === 'd' && !self.isJumping){  
       self.sprite.classList.add('player-movement')
       landscape.style.left = parseInt(landscape.style.left) - 5 + 'px'
       if(parseInt(landscape.style.left)<= -640){
         landscape.style.left = '0px'
       }
-
     }
   };
   this.stop = function(e){

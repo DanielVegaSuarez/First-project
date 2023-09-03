@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: black;
   display: flex;
   gap: 40px;
   margin: 40px;
@@ -11,17 +11,27 @@ body {
   background-color: rgba(0, 255, 255, 0.349);
   border-radius: 30px;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 #landscape{
   width: 1800px;
-  height: 400px;
+  height: 650px;
   background-image: url('./assets/17031611.jpeg');
-  background-size: contain;
-  
+  background-size: contain;  
   position: absolute;
   z-index: -1;
 }
+
+#landscape2{
+  width: 1800px;
+  height: 150px;
+  background-image: url('./assets/17031611.jpeg');
+  background-size: contain;  
+  position: absolute;
+  top: 650px;
+  z-index: -1;
+}
+
 #info {
   background-color: red;
   width: 400px;
