@@ -26,6 +26,7 @@ function Player(x, y) {
   this.interaction = function (e) {
     if (e.key === " " && self.isJumping === false) {
       self.sprite.style.backgroundImage = 'url(./assets/jump.png)'
+      
       let timerUp = setInterval(function () {
         self.isJumping = true;
         
