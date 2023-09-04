@@ -9,7 +9,9 @@ body {
   width: 1200px;
   height: 800px;
   background-color: rgba(0, 255, 255, 0.349);
-  border-radius: 30px;
+  border: 30px solid;
+  border-image-source: url('/assets/backgroundFinal.png');
+  border-image-slice: 45;
   position: relative;
   overflow: hidden;
 }
@@ -33,7 +35,8 @@ body {
 }
 
 #info {
-  background-color: red;
+  background-color: rgba(0, 234, 255, 0.235);
+  border: 5px solid rgb(15, 49, 129);
   width: 400px;
   height: 800px;
   min-width: 180px;
@@ -47,19 +50,21 @@ body {
 }
 
 #playerinfo {
-  background-color: blue;
+  background-color: rgba(0, 234, 255, 0.235);
+  border: 3px solid rgb(4, 49, 78);
   width: 80%;
   height: 30%;
-  border-radius: 10px 100px / 120px;
+  border-radius: 10px;
 }
 
 #stageinfo {
   display: flex;
   justify-content: center;
-  background-color: blue;
+  background-color: rgba(0, 234, 255, 0.235);
+  border: 3px solid rgb(4, 49, 78);
   width: 80%;
   height: 50%;
-  border-radius: 70px 10px / 120px;
+  border-radius: 10px;
 }
 #timer {
   display: flex;
