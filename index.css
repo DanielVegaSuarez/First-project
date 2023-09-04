@@ -102,6 +102,15 @@ body {
   background-image: url("./assets/spikesManual.png");
   position: absolute;
 }
+.obstacleBat{
+  display: inline-block;
+  width: 90px;
+  height: 100px;
+  margin: auto;
+  background-image: url("./assets/gifBat.gif");
+  background-size: 90px 100px;
+  position: absolute;
+}
 
 .player-movement {
   animation: playerMovement 0.5s linear;
