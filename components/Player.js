@@ -50,23 +50,37 @@ function Player(x, y) {
         self.isJumping = true;
 
         if (self.isGoingUp && self.y >= 330) {
-          self.sprite.style.top = parseInt(self.sprite.style.top) - 5 + "px";
+          if (self.isGoingUp && self.y > 450) {
+            
+            self.sprite.style.top = parseInt(self.sprite.style.top) - 10 + "px";
+          } else {
+           
+            self.sprite.style.top = parseInt(self.sprite.style.top) - 6 + "px";
+          }
+
           self.y = parseInt(self.sprite.style.top);
         } else {
           self.isGoingUp = false;
         }
         if (!self.isGoingUp) {
-          self.sprite.style.top = parseInt(self.sprite.style.top) + 5 + "px";
+          if (self.y < 400) {
+            
+            self.sprite.style.top = parseInt(self.sprite.style.top) + 6 + "px";
+          } else {
+            
+            self.sprite.style.top = parseInt(self.sprite.style.top) + 10 + "px";
+          }
           self.y = parseInt(self.sprite.style.top);
-          if (self.y === 530) {
+          if (self.y >= 530) {
+            self.sprite.style.top = "530px";
             self.sprite.style.backgroundImage = "";
             self.isGoingUp = true;
             clearInterval(timerUp);
             self.isJumping = false;
-            self.stop()
+            self.stop();
           }
         }
-      }, 20);
+      }, 25);
     }
     if (e.key === "d" && !self.isJumping) {
       self.sprite.classList.add("player-movement");
@@ -74,8 +88,7 @@ function Player(x, y) {
     }
   };
   this.stop = function (e) {
-    if(!self.isJumping){
-
+    if (!self.isJumping) {
       clearInterval(self.landscapeIntervalID);
       self.isWalking = false;
     }
