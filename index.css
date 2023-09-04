@@ -52,6 +52,8 @@ body {
 }
 
 #playerinfo {
+  display: flex;
+  justify-content: center;
   background-color: rgba(0, 234, 255, 0.235);
   border: 5px solid rgb(4, 49, 78);
   border-image: url('./assets/cableL.png') 30 round;
@@ -61,9 +63,10 @@ body {
 }
 
 #stageinfo {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 234, 255, 0.235);
+  
+  background-image: url('./assets/controls1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 5px solid rgb(4, 49, 78);
   border-image: url('./assets/cableL.png') 30 round;
   width: 80%;
