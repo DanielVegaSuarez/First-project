@@ -1,17 +1,12 @@
 import { Player } from "./components/Player.js";
 import { Obstacle } from "./components/Obstacle.js";
 const board = document.querySelector("#board");
-const gameTimer = document.querySelector('#timer')
+const points = document.querySelector('#points')
 const player = new Player(150, 530, board);
 let obstacles = [];
-let timePlaying = 0
 player.createPlayer();
 function startGame(){
-  let timePlayingUp = setInterval(function(){
-    gameTimer.innerText = timePlaying
-    timePlaying++
-
-  }, 1000)
+  points.innerText = 0
   function obstacleLoop() {
     let newObstacle = new Obstacle(1100, 710, player);
     obstacles.push(newObstacle);
@@ -23,6 +18,7 @@ function startGame(){
     let timer = setInterval(() => {
       if (newObstacle.x + player.width + newObstacle.width <= 0) {
         newObstacle.removeObstacle();
+        points.innerText ++
         clearInterval(collisionTimer);
         clearInterval(timer);
         obstacles.shift();
@@ -39,8 +35,7 @@ function startGame(){
       })
       obstacles = []
       clearInterval(checkDeath);
-      clearInterval(timePlayingUp)
-      gameTimer.innerText = 0
+      
     }
   }
   let checkDeath = setInterval(gameOver, 10);
