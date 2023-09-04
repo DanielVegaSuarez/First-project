@@ -34,6 +34,22 @@ body {
   z-index: -1;
 }
 
+#gameover {
+  width: 1200px;
+  height: 800px;
+  background-image: url("./assets/GameOver.png");
+  position: absolute;
+}
+
+#startbutton {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  top: 650px;
+  left: 450px;
+}
+
 #info {
   background-color: rgba(255, 255, 255, 0.103);
   border: 5px solid rgb(15, 49, 129);
