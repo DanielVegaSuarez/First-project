@@ -1,5 +1,6 @@
 import { Player } from "./components/Player.js";
 import { Obstacle } from "./components/Obstacle.js";
+import { ObstacleBat } from "./components/ObstacleBat.js";
 const board = document.querySelector("#board");
 const points = document.querySelector('#points')
 const player = new Player(150, 530, board);
