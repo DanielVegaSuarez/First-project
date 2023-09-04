@@ -10,7 +10,7 @@ body {
   height: 800px;
   background-color: rgba(0, 255, 255, 0.349);
   border: 10px solid;
-  border-image: url('./assets/cableL.png') 30 round;
+  border-image: url("./assets/cableL.png") 30 round;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
@@ -37,7 +37,7 @@ body {
 #info {
   background-color: rgba(0, 234, 255, 0.136);
   border: 5px solid rgb(15, 49, 129);
-  border-image: url('./assets/cableL.png') 30 round;
+  border-image: url("./assets/cableL.png") 30 round;
   width: 400px;
   height: 800px;
   min-width: 180px;
@@ -48,7 +48,6 @@ body {
   align-items: center;
   gap: 40px;
   box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
-  
 }
 
 #playerinfo {
@@ -56,19 +55,17 @@ body {
   justify-content: center;
   background-color: rgba(0, 234, 255, 0.235);
   border: 5px solid rgb(4, 49, 78);
-  border-image: url('./assets/cableL.png') 30 round;
+  border-image: url("./assets/cableL.png") 30 round;
   width: 80%;
   height: 30%;
-  
 }
 
 #stageinfo {
-  
-  background-image: url('./assets/controls1.png');
+  background-image: url("./assets/controls1.png");
   background-repeat: no-repeat;
   background-size: cover;
   border: 5px solid rgb(4, 49, 78);
-  border-image: url('./assets/cableL.png') 30 round;
+  border-image: url("./assets/cableL.png") 30 round;
   width: 80%;
   height: 50%;
 }
@@ -85,15 +82,15 @@ body {
 }
 #player {
   display: inline-block;
-  background-image: url('./assets/stand.png');
+  background-image: url("./assets/stand.png");
   width: 100px;
   height: 200px;
   position: absolute;
   background-size: 100px 200px;
   background-repeat: no-repeat;
 }
-.jump{
-  background-image: url('./assets/jump.png');
+.jump {
+  background-image: url("./assets/jump.png");
   background-size: 100px 200px;
   background-repeat: no-repeat;
 }
@@ -102,12 +99,12 @@ body {
   width: 100px;
   height: 20px;
   margin: auto;
-  background-image: url('./assets/spikesManual.png');
+  background-image: url("./assets/spikesManual.png");
   position: absolute;
 }
 
 .player-movement {
-  animation: playerMovement .5s linear;
+  animation: playerMovement 0.5s linear;
   animation-iteration-count: infinite;
   background-size: 100px 200px;
   background-repeat: no-repeat;
@@ -125,8 +122,7 @@ body {
   65% {
     background-image: url("./assets/otherStep.png");
   }
-  100%{
-    background-image: url('./assets/jump.png');
+  100% {
+    background-image: url("./assets/jump.png");
   }
- 
 }
