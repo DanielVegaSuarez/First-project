@@ -39,6 +39,7 @@ body {
   height: 800px;
   background-image: url("./assets/GameOver.png");
   position: absolute;
+  display: none;
 }
 
 #startbutton {
