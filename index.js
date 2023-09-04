@@ -39,10 +39,13 @@ function startGame(){
       })
       obstacles = []
       clearInterval(checkDeath);
+      clearInterval(timePlayingUp)
+      gameTimer.innerText = 0
     }
   }
   let checkDeath = setInterval(gameOver, 10);
   window.onkeydown = player.interaction;
   window.onkeyup = player.stop;
+  
 }
 startGame()

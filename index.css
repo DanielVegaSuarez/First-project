@@ -74,7 +74,7 @@ body {
 }
 #player {
   display: inline-block;
-  background-image: url('./assets/otherStep.png');
+  background-image: url('./assets/stand.png');
   width: 100px;
   height: 200px;
   position: absolute;
@@ -82,7 +82,7 @@ body {
   background-repeat: no-repeat;
 }
 .jump{
-  background-image: url('./assets/paso1.png');
+  background-image: url('./assets/jump.png');
   background-size: 100px 200px;
   background-repeat: no-repeat;
 }
@@ -107,16 +107,15 @@ body {
     background-image: url("./assets/paso1.png");
   }
 
-  40% {
+  35% {
     background-image: url("./assets/otroPaso.png");
   }
 
-  80% {
+  65% {
     background-image: url("./assets/otherStep.png");
   }
-
-  100% {
-    background-image: url("./assets/paso1.png");
+  100%{
+    background-image: url('./assets/jump.png');
   }
  
 }
