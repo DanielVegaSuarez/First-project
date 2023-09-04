@@ -2,7 +2,7 @@ import { Player } from "./components/Player.js";
 import { Obstacle } from "./components/Obstacle.js";
 const board = document.querySelector("#board");
 const gameTimer = document.querySelector('#timer')
-const player = new Player(150, 500, board);
+const player = new Player(150, 530, board);
 let obstacles = [];
 let timePlaying = 0
 player.createPlayer();
@@ -13,7 +13,7 @@ function startGame(){
 
   }, 1000)
   function obstacleLoop() {
-    let newObstacle = new Obstacle(1100, 680, player);
+    let newObstacle = new Obstacle(1100, 710, player);
     obstacles.push(newObstacle);
     
     newObstacle.createObstacle();

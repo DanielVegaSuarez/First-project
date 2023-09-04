@@ -30,7 +30,7 @@ function Player(x, y) {
       let timerUp = setInterval(function () {
         self.isJumping = true;
         
-        if (self.isGoingUp && self.y >=300) {
+        if (self.isGoingUp && self.y >=330) {
           self.sprite.style.top = parseInt(self.sprite.style.top) - 5 + "px";
           self.y = parseInt(self.sprite.style.top);
         }else{
@@ -39,7 +39,7 @@ function Player(x, y) {
         if (!self.isGoingUp) {
           self.sprite.style.top = parseInt(self.sprite.style.top) + 5 + "px";
           self.y = parseInt(self.sprite.style.top);
-          if (self.y === 500) {
+          if (self.y === 530) {
             self.sprite.style.backgroundImage = ''
             self.isGoingUp = true;
             clearInterval(timerUp);
