@@ -10,9 +10,10 @@ body {
   height: 800px;
   background-color: rgba(0, 255, 255, 0.349);
   border: 10px solid;
-  border-image: url('./assets/cable2.png') 30 round;
+  border-image: url('./assets/cableL.png') 30 round;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
 }
 #landscape {
   width: 3600px;
@@ -34,9 +35,9 @@ body {
 }
 
 #info {
-  background-color: rgba(0, 234, 255, 0.235);
+  background-color: rgba(0, 234, 255, 0.136);
   border: 5px solid rgb(15, 49, 129);
-  border-image: url('./assets/cable2.png') 40 round;
+  border-image: url('./assets/cableL.png') 30 round;
   width: 400px;
   height: 800px;
   min-width: 180px;
@@ -46,16 +47,17 @@ body {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  border-radius: 30px;
+  box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
+  
 }
 
 #playerinfo {
   background-color: rgba(0, 234, 255, 0.235);
   border: 5px solid rgb(4, 49, 78);
-  border-image: url('./assets/cable2.png') 40 round;
+  border-image: url('./assets/cableL.png') 30 round;
   width: 80%;
   height: 30%;
-  border-radius: 10px;
+  
 }
 
 #stageinfo {
@@ -63,10 +65,9 @@ body {
   justify-content: center;
   background-color: rgba(0, 234, 255, 0.235);
   border: 5px solid rgb(4, 49, 78);
-  border-image: url('./assets/cable2.png') 40 round;
+  border-image: url('./assets/cableL.png') 30 round;
   width: 80%;
   height: 50%;
-  border-radius: 10px;
 }
 #timer {
   display: flex;
