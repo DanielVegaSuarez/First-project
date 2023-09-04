@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-image: url('./assets/stars.png');
   display: flex;
   gap: 40px;
   margin: 40px;
@@ -35,7 +35,7 @@ body {
 }
 
 #info {
-  background-color: rgba(0, 234, 255, 0.136);
+  background-color: rgba(255, 255, 255, 0.103);
   border: 5px solid rgb(15, 49, 129);
   border-image: url("./assets/cableL.png") 30 round;
   width: 400px;
@@ -53,19 +53,21 @@ body {
 #playerinfo {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 234, 255, 0.235);
+  background-color: transparent;
   border: 5px solid rgb(4, 49, 78);
   border-image: url("./assets/cableL.png") 30 round;
+  box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
   width: 80%;
   height: 30%;
 }
 
 #stageinfo {
-  background-image: url("./assets/controls1.png");
+  background-image: url("./assets/controls2.png");
   background-repeat: no-repeat;
   background-size: cover;
   border: 5px solid rgb(4, 49, 78);
   border-image: url("./assets/cableL.png") 30 round;
+  box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
   width: 80%;
   height: 50%;
 }
