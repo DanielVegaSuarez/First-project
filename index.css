@@ -14,10 +14,10 @@ body {
   overflow: hidden;
 }
 #landscape {
-  width: 1800px;
+  width: 3600px;
   height: 650px;
   background-image: url("./assets/backgroundFinal.png");
-  background-size: cover;
+  background-size: 1800px 650px;
   position: absolute;
   z-index: -1;
 }

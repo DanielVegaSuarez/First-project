@@ -49,7 +49,7 @@ function Player(x, y) {
     if(e.key === 'd' && !self.isJumping){  
       self.sprite.classList.add('player-movement')
       landscape.style.left = parseInt(landscape.style.left) - 5 + 'px'
-      if(parseInt(landscape.style.left)<= -640){
+      if(parseInt(landscape.style.left)<= -1800){
         landscape.style.left = '0px'
       }
     }
