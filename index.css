@@ -22,11 +22,11 @@ body {
   z-index: -1;
 }
 
-#landscape2 {
-  width: 1800px;
+#road {
+  width: 3600px;
   height: 150px;
   background-image: url("./assets/roadFinal.png");
-  background-size: cover;
+  background-size: 1800px 150px;
   position: absolute;
   top: 650px;
   z-index: -1;

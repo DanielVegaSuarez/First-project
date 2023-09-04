@@ -1,5 +1,7 @@
 const landscape = document.querySelector('#landscape')
 landscape.style.left = '0px'
+const road = document.querySelector('#road')
+road.style.left = '0px'
 function Player(x, y) {
   let self = this;
   this.x = x;
@@ -49,8 +51,13 @@ function Player(x, y) {
     if(e.key === 'd' && !self.isJumping){  
       self.sprite.classList.add('player-movement')
       landscape.style.left = parseInt(landscape.style.left) - 5 + 'px'
+      road.style.left = parseInt(road.style.left) - 20 + 'px'
       if(parseInt(landscape.style.left)<= -1800){
         landscape.style.left = '0px'
+        
+      }
+      if(parseInt(road.style.left) <= -1800){
+        road.style.left = '0px'
       }
     }
   };
