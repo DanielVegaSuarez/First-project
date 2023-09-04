@@ -40,8 +40,6 @@ body {
   border-image: url("./assets/cableL.png") 30 round;
   width: 400px;
   height: 800px;
-  min-width: 180px;
-  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,19 +55,19 @@ body {
   border: 5px solid rgb(4, 49, 78);
   border-image: url("./assets/cableL.png") 30 round;
   box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
-  width: 80%;
-  height: 30%;
+  width: 280px;
+  height: 250px;
 }
 
 #stageinfo {
   background-image: url("./assets/controls2.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 280px 430px;
   border: 5px solid rgb(4, 49, 78);
   border-image: url("./assets/cableL.png") 30 round;
   box-shadow: 0px 0px 20px 2px rgb(49, 160, 239);
-  width: 80%;
-  height: 50%;
+  width: 280px;
+  height: 430px;
 }
 #timer {
   display: flex;
