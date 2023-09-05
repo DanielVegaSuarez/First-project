@@ -4,7 +4,7 @@ import { ObstacleBat } from "./components/ObstacleBat.js";
 const board = document.querySelector("#board");
 const points = document.querySelector("#points");
 const player = new Player(150, 530, board);
-const bat = new ObstacleBat(1100, 500, board);
+const bat = new ObstacleBat(1100, 500, player);
 let obstacles = [];
 player.createPlayer();
 bat.createObstacleBat();
@@ -15,13 +15,15 @@ function startGame() {
   laserSound.play()
 
   points.innerText = 0;
+let collisionBat = setInterval(bat.checkCollision, 30)
+  
   function obstacleLoop() {
     let newObstacle = new Obstacle(1100, 710, player);
     obstacles.push(newObstacle);
-
     newObstacle.createObstacle();
     newObstacle.movement();
     let collisionTimer = setInterval(newObstacle.checkCollision, 30);
+
 
     let timer = setInterval(() => {
       if (newObstacle.x + player.width + newObstacle.width <= 0) {
