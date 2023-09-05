@@ -36,6 +36,7 @@ function ObstacleBat(x, y, player) {
     if (
     self.x <= player.x + player.width
     ) {
+      self.removeObstacleBat()
       player.isDead = true
     }
   };
