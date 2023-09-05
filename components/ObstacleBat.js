@@ -34,11 +34,8 @@ function ObstacleBat(x, y, player) {
 
   this.checkCollision = function () {
     if (
-      self.x <= player.x + player.width &&
-      self.x >= 50 &&
-      player.y + player.height >= self.y
+    self.x <= player.x + player.width
     ) {
-      
       player.isDead = true
     }
   };
