@@ -45,6 +45,7 @@ function Player(x, y) {
   this.interaction = function (e) {
     if(e.key === 'e'){
       laser.style.display = 'inline-block'
+      laser.style.animation = 'laserPium .2s linear'
     }
     if (e.key === " " && self.isJumping === false) {
       self.landscapeInterval();

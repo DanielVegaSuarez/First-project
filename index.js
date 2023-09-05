@@ -12,25 +12,28 @@ player.createPlayer();
 
 restart.onclick = startGame;
 function startGame() {
-  const bat = new ObstacleBat(1100, 500, player);
-  bat.createObstacleBat();
-  bat.movement();
-  over.style.display = '';
+  over.style.display = "";
   // music.play()
   // laserSound.play()
 
   points.innerText = 0;
-  let collisionBat = setInterval(bat.checkCollision, 100);
+  
 
   function obstacleLoop() {
-    
+    let bat = new ObstacleBat(1100, 500, player);
+    bat.createObstacleBat();
+    bat.movement();
+    let collisionBat = setInterval(bat.checkCollision, 100);
     let newObstacle = new Obstacle(1100, 710, player);
     obstacles.push(newObstacle);
     newObstacle.createObstacle();
     newObstacle.movement();
     let collisionTimer = setInterval(newObstacle.checkCollision, 30);
 
-    let timer = setInterval(() => {
+    let timer = setInterval(function(){
+      if(player.isDead){
+        clearInterval(collisionBat)
+      }
       if (newObstacle.x + player.width + newObstacle.width <= 0) {
         newObstacle.removeObstacle();
         points.innerText++;
@@ -40,14 +43,13 @@ function startGame() {
       }
     }, 10);
   }
-  let obstacleGenerator = setInterval(obstacleLoop, 5000);
+  let obstacleGenerator = setInterval(obstacleLoop, 4000);
   function gameOver() {
     if (player.isDead) {
       clearInterval(checkDeath);
-      clearInterval(collisionBat)
       clearInterval(obstacleGenerator);
-      window.onkeydown = ''
-      window.onkeyup = ''
+      window.onkeydown = "";
+      window.onkeyup = "";
       over.style.display = "flex";
       player.isDead = false;
       obstacles.forEach((obs) => {
