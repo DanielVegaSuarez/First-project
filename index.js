@@ -4,6 +4,7 @@ import { ObstacleBat } from "./components/ObstacleBat.js";
 const board = document.querySelector("#board");
 const points = document.querySelector("#points");
 const player = new Player(150, 530, board);
+const over = board.querySelector('#gameover')
 const bat = new ObstacleBat(1100, 500, player);
 let obstacles = [];
 player.createPlayer();
@@ -15,9 +16,10 @@ function startGame() {
   laserSound.play()
 
   points.innerText = 0;
-let collisionBat = setInterval(bat.checkCollision, 30)
+  let collisionBat = setInterval(bat.checkCollision, 30)
   
   function obstacleLoop() {
+    console.log('pinchos')
     let newObstacle = new Obstacle(1100, 710, player);
     obstacles.push(newObstacle);
     newObstacle.createObstacle();
@@ -39,7 +41,7 @@ let collisionBat = setInterval(bat.checkCollision, 30)
   function gameOver() {
     if (player.isDead) {
       clearInterval(obstacleGenerator);
-      alert("game over");
+      console.log(over.style.display = 'flex')
       obstacles.forEach((obs) => {
         obs.removeObstacle();
       });
@@ -52,7 +54,7 @@ let collisionBat = setInterval(bat.checkCollision, 30)
   window.onkeyup = player.stop;
 }
 
-//var laserSound = new Audio("./assets/laserSound.mp3")
+var laserSound = new Audio("./assets/laserSound.mp3")
 var music = new Audio("./assets/musica.mp3");
 music.volume = 1;
 
