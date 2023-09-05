@@ -119,6 +119,15 @@ body {
   background-repeat: no-repeat;
 }
 
+#laser {
+  display: inline-block;
+  width: 888px;
+  height: 50px;
+  margin: 528px 228px;
+  background-image: url("./assets/laser.png");
+  position: hidden;
+}
+
 @keyframes playerMovement {
   0% {
     background-image: url("./assets/paso1.png");
