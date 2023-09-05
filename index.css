@@ -161,6 +161,31 @@ button:hover div {
   background-repeat: no-repeat;
 }
 
+#startimg {
+width: 100%;
+color: rgba(255, 255, 255, 0);
+font-size: 150px;
+font-weight: bold;
+
+background-image: url(./assets/backgroundFinal.png);
+background-size: cover;
+background-position-y: center;
+
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#start {
+background-color: rgba(255, 0, 0, 0);
+min-height: 100vh;
+display: flex;
+align-items: center;}
+
+#bot {
+  align-items: center;
+}
+
 #laser {
   width: 888px;
   height: 40px;
@@ -168,6 +193,7 @@ button:hover div {
   background-image: url("./assets/laser.png");
   display: none;
 }
+
 @keyframes laserPium {
   from{
     width: 0px;
