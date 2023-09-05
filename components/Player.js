@@ -14,6 +14,7 @@ function Player(x, y) {
   this.isGoingUp = true;
   this.isDead = false;
   this.isWalking = false;
+  this.isShooting;
   this.landscapeIntervalID;
 
   this.landscapeInterval = function () {
@@ -43,9 +44,11 @@ function Player(x, y) {
     document.querySelector("#board").appendChild(newPlayer);
   };
   this.interaction = function (e) {
-    if(e.key === 'e'){
+    if(e.key === 'e' && self.isShooting === false){
+      self.isShooting = true
       laser.style.display = 'inline-block'
       laser.style.animation = 'laserPium .2s linear'
+      
     }
     if (e.key === " " && self.isJumping === false) {
       self.landscapeInterval();
@@ -93,7 +96,9 @@ function Player(x, y) {
     }
   };
   this.stop = function (e) {
+    laser.style.animation = ''
     laser.style.display = ''
+    self.isShooting = false
     if (!self.isJumping) {
       clearInterval(self.landscapeIntervalID);
       self.isWalking = false;
