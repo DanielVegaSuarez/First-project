@@ -9,6 +9,9 @@ let obstacles = [];
 player.createPlayer();
 bat.createObstacleBat();
 bat.movement();
+let myAudio = document.querySelector('#audio')
+myAudio.play()
+
 function startGame() {
   points.innerText = 0;
   function obstacleLoop() {
