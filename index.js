@@ -9,7 +9,11 @@ let obstacles = [];
 player.createPlayer();
 bat.createObstacleBat();
 bat.movement();
+
 function startGame() {
+  music.play()
+  laserSound.play()
+
   points.innerText = 0;
   function obstacleLoop() {
     let newObstacle = new Obstacle(1100, 710, player);
@@ -45,4 +49,10 @@ function startGame() {
   window.onkeydown = player.interaction;
   window.onkeyup = player.stop;
 }
+
+//var laserSound = new Audio("./assets/laserSound.mp3")
+var music = new Audio("./assets/musica.mp3");
+music.volume = 1;
+
+
 startGame();
