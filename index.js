@@ -6,11 +6,12 @@ const points = document.querySelector("#points");
 const player = new Player(150, 530, board);
 const over = board.querySelector('#gameover')
 const bat = new ObstacleBat(1100, 500, player);
+const restart = document.querySelector('button')
 let obstacles = [];
 player.createPlayer();
 bat.createObstacleBat();
 bat.movement();
-
+restart
 function startGame() {
   music.play()
   laserSound.play()
@@ -41,7 +42,8 @@ function startGame() {
   function gameOver() {
     if (player.isDead) {
       clearInterval(obstacleGenerator);
-      console.log(over.style.display = 'flex')
+      bat.removeObstacleBat()
+      over.style.display = 'flex'
       obstacles.forEach((obs) => {
         obs.removeObstacle();
       });
