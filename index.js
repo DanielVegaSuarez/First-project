@@ -23,7 +23,7 @@ function startGame() {
   let collisionBat = setInterval(bat.checkCollision, 100);
 
   function obstacleLoop() {
-    console.log("pinchos");
+    
     let newObstacle = new Obstacle(1100, 710, player);
     obstacles.push(newObstacle);
     newObstacle.createObstacle();
