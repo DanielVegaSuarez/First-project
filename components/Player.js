@@ -2,6 +2,7 @@ const landscape = document.querySelector("#landscape");
 landscape.style.left = "0px";
 const road = document.querySelector("#road");
 road.style.left = "0px";
+const laser = document.querySelector('#laser')
 function Player(x, y) {
   let self = this;
   this.x = x;
@@ -42,6 +43,9 @@ function Player(x, y) {
     document.querySelector("#board").appendChild(newPlayer);
   };
   this.interaction = function (e) {
+    if(e.key === 'e'){
+      laser.style.display = 'inline-block'
+    }
     if (e.key === " " && self.isJumping === false) {
       self.landscapeInterval();
       self.sprite.style.backgroundImage = "url(./assets/jump.png)";
@@ -88,6 +92,7 @@ function Player(x, y) {
     }
   };
   this.stop = function (e) {
+    laser.style.display = ''
     if (!self.isJumping) {
       clearInterval(self.landscapeIntervalID);
       self.isWalking = false;

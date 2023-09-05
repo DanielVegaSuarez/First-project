@@ -36,7 +36,7 @@ body {
 }
 
 #gameover {
-  display: none; 
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -49,7 +49,6 @@ body {
   color: rgb(62, 120, 229);
   position: absolute;
   z-index: 1;
-  
 }
 #gameover > * {
   margin: 0;
@@ -68,15 +67,13 @@ button {
 button:hover div {
   position: relative;
   text-decoration: underline 3px white;
-  animation: animationx 1s infinite ;
-  
+  animation: animationx 1s infinite;
 }
 
 @keyframes animationx {
-  0%{
+  0% {
     top: -10px;
   }
- 
 }
 #info {
   background-color: rgba(255, 255, 255, 0.103);
@@ -164,12 +161,12 @@ button:hover div {
 }
 
 #laser {
-  display: inline-block;
   width: 888px;
-  height: 50px;
+  height: 40px;
   margin: 528px 228px;
   background-image: url("./assets/laser.png");
-  position: hidden;
+  display: none;
+ 
 }
 
 @keyframes playerMovement {

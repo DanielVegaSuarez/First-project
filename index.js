@@ -46,6 +46,8 @@ function startGame() {
       clearInterval(checkDeath);
       clearInterval(collisionBat)
       clearInterval(obstacleGenerator);
+      window.onkeydown = ''
+      window.onkeyup = ''
       over.style.display = "flex";
       player.isDead = false;
       obstacles.forEach((obs) => {
