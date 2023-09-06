@@ -160,7 +160,6 @@ button:hover div {
   background-size: 100px 200px;
   background-repeat: no-repeat;
 }
-
 #laser {
   width: 888px;
   height: 40px;
@@ -168,6 +167,7 @@ button:hover div {
   background-image: url("./assets/laser.png");
   display: none;
 }
+
 @keyframes laserPium {
   from{
     width: 0px;
