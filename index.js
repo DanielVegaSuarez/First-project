@@ -19,7 +19,7 @@ no.onclick = function(){
   over.style.display = "";
 }
 function startGame() {
-  console.log('hola')
+  music.play()
   const player = new Player(150, 530);
   player.createPlayer();
   
@@ -77,6 +77,8 @@ function startGame() {
   let obstacleGenerator = setInterval(obstacleLoop, 5000);
   function gameOver() {
     if (player.isDead) {
+      music.pause()
+      music.currentTime = 0;
       board.removeChild(player.sprite)
       player.isDead = false;
       clearInterval(checkDeath);
