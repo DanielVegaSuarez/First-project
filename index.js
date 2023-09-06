@@ -77,6 +77,7 @@ function startGame() {
   let obstacleGenerator = setInterval(obstacleLoop, 5000);
   function gameOver() {
     if (player.isDead) {
+      board.removeChild(player.sprite)
       player.isDead = false;
       clearInterval(checkDeath);
       clearInterval(obstacleGenerator);
