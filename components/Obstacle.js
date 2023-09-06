@@ -38,7 +38,6 @@ function Obstacle(x, y, player) {
       self.x >= 50 &&
       player.y + player.height >= self.y
     ) {
-      
       player.isDead = true
     }
   };

@@ -27,16 +27,15 @@ function ObstacleBat(x, y, player) {
     this.moveTimer = timer;
   };
 
-  this.removeObstacleBat = function () {
+  this.removeObstacle = function () {
     document.querySelector("#board").removeChild(self.sprite);
     clearInterval(self.moveTimer);
   };
-
+  
   this.checkCollision = function () {
     if (
     self.x <= player.x + player.width
     ) {
-      self.removeObstacleBat()
       player.isDead = true
     }
   };
