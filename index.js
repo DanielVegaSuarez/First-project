@@ -3,18 +3,28 @@ import { Obstacle } from "./components/Obstacle.js";
 import { ObstacleBat } from "./components/ObstacleBat.js";
 const board = document.querySelector("#board");
 const points = document.querySelector("#points");
-const player = new Player(150, 530);
-
-const restart = document.querySelector("button");
+const start = document.querySelector('#startButton')
+const over = board.querySelector("#gameover");
+const restart = document.querySelector("#yes");
 let obstacles = [];
-player.createPlayer();
 
 restart.onclick = startGame;
-function startGame() {
-  const over = board.querySelector("#gameover");
+start.onclick = function(){
+  music.play()
+  startGame()
+  board.querySelector('#start').style.display = 'none'
+}
+no.onclick = function(){
+  board.querySelector('#start').style.display = 'inline-block'
   over.style.display = "";
-  // music.play()
-  // laserSound.play()
+}
+function startGame() {
+  console.log('hola')
+  const player = new Player(150, 530);
+  player.createPlayer();
+  
+  over.style.display = "";
+  
 
   points.innerText = 0;
   
@@ -33,6 +43,7 @@ function startGame() {
 
     let timer = setInterval(function () {
       if (player.isShooting) {
+        
         player.isShooting = false;
         let deadBats = obstacles.filter((obs) => {
           return obs.y < 530;
@@ -49,7 +60,6 @@ function startGame() {
           obs.removeObstacle();
         });
         points.innerText = parseInt(points.innerText) + deadBats.length * 2
-        console.log(typeof deadBats.length, typeof points.innerText)
         deadBats = [];
       }
       if (player.isDead) {
@@ -85,8 +95,8 @@ function startGame() {
   window.onkeyup = player.stop;
 }
 
-// var laserSound = new Audio("./assets/laserSound.mp3")
-// var music = new Audio("./assets/musica.mp3");
-// music.volume = 1;
 
-startGame();
+var music = new Audio("./assets/musica.mp3");
+music.volume = 1;
+
+

@@ -3,6 +3,7 @@ landscape.style.left = "0px";
 const road = document.querySelector("#road");
 road.style.left = "0px";
 const laser = document.querySelector('#laser')
+var laserSound = new Audio("./assets/laserSound.wav")
 function Player(x, y) {
   let self = this;
   this.x = x;
@@ -45,7 +46,7 @@ function Player(x, y) {
   };
   this.interaction = function (e) {
     if(e.key === 'e' && self.isShooting === false){
-      
+      laserSound.play()
       self.isShooting = true
       laser.style.display = 'inline-block'
       laser.style.animation = 'laserPium .2s linear'
