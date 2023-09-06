@@ -50,28 +50,31 @@ body {
   position: absolute;
   z-index: 1;
   letter-spacing: 10px;
-  text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+  text-shadow: 8px 8px 8px rgb(94, 129, 241);
 }
 #gameover > * {
   margin: 0;
 }
-#img {
+#start {
+  display: ;
+  text-align:center;
+  border: 5px solid;
+  width: 50%;
+  padding: 10px;
+  flex-direction: column;
   align-items: center;
-  width: 200px;
-  length: 500px;
+  gap: 10px;
+  font-family: "VT323";
+  padding-top: 10%;
+  font-size: 80px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: rgb(27, 95, 223);
+  position: absolute;
+  z-index: 1;
+  letter-spacing: 10px;
+  text-shadow: 8px 8px 8px rgb(94, 129, 241);
 }
 button {
   font-size: 30px;
