@@ -46,12 +46,35 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  color: rgb(62, 120, 229);
+  color: rgb(27, 95, 223);
   position: absolute;
   z-index: 1;
+  letter-spacing: 10px;
+  text-shadow: 8px 8px 8px rgb(94, 129, 241);
 }
 #gameover > * {
   margin: 0;
+}
+#start {
+  display: ;
+  text-align:center;
+  border: 5px solid;
+  width: 50%;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: "VT323";
+  padding-top: 10%;
+  font-size: 80px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: rgb(27, 95, 223);
+  position: absolute;
+  z-index: 1;
+  letter-spacing: 10px;
+  text-shadow: 8px 8px 8px rgb(94, 129, 241);
 }
 button {
   font-size: 30px;
