@@ -17,10 +17,9 @@ function startGame() {
   // laserSound.play()
 
   points.innerText = 0;
-  
 
   function obstacleLoop() {
-    player.isShooting = false
+    player.isShooting = false;
     let bat = new ObstacleBat(1100, 500, player);
     bat.createObstacleBat();
     bat.movement();
@@ -30,27 +29,36 @@ function startGame() {
     obstacles.push(bat);
     newObstacle.createObstacle();
     newObstacle.movement();
-    let collisionTimer = setInterval(newObstacle.checkCollision, 30);
+    let collisionTimer = setInterval(newObstacle.checkCollision, 100);
 
-    let timer = setInterval(function(){
-      if(player.isShooting){
-        player.isShooting = false
-        
-        obstacles = [...obstacles.filter(obs=>{
-          return obs.y > 530
-        })]
-        
-        clearInterval(collisionBat)
-        bat.removeObstacle()
-        
+    let timer = setInterval(function () {
+      if (player.isShooting) {
+        player.isShooting = false;
+        let deadBats = obstacles.filter((obs) => {
+          return obs.y < 530;
+        });
+        obstacles = [
+          ...obstacles.filter((obs) => {
+            return obs.y > 530;
+          }),
+        ];
+
+        clearInterval(collisionBat);
+
+        deadBats.forEach((obs) => {
+          obs.removeObstacle();
+        });
+        points.innerText = parseInt(points.innerText) + deadBats.length * 2
+        console.log(typeof deadBats.length, typeof points.innerText)
+        deadBats = [];
       }
-      if(player.isDead){
-        clearInterval(collisionBat)
+      if (player.isDead) {
+        clearInterval(collisionBat);
+        clearInterval(collisionTimer);
       }
       if (newObstacle.x + player.width + newObstacle.width <= 0) {
         newObstacle.removeObstacle();
-        points.innerText++;
-        clearInterval(collisionTimer);
+        points.innerText = parseInt(points.innerText) + 5
         clearInterval(timer);
         obstacles.shift();
       }
@@ -59,13 +67,12 @@ function startGame() {
   let obstacleGenerator = setInterval(obstacleLoop, 5000);
   function gameOver() {
     if (player.isDead) {
-      
+      player.isDead = false;
       clearInterval(checkDeath);
       clearInterval(obstacleGenerator);
       window.onkeydown = "";
       window.onkeyup = "";
       over.style.display = "flex";
-      player.isDead = false;
       obstacles.forEach((obs) => {
         obs.removeObstacle();
       });
