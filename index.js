@@ -4,7 +4,6 @@ import { ObstacleBat } from "./components/ObstacleBat.js";
 const board = document.querySelector("#board");
 const points = document.querySelector("#points");
 const player = new Player(150, 530);
-const over = board.querySelector("#gameover");
 
 const restart = document.querySelector("button");
 let obstacles = [];
@@ -12,12 +11,13 @@ player.createPlayer();
 
 restart.onclick = startGame;
 function startGame() {
+  const over = board.querySelector("#gameover");
   over.style.display = "";
   // music.play()
   // laserSound.play()
 
   points.innerText = 0;
-
+  
   function obstacleLoop() {
     player.isShooting = false;
     let bat = new ObstacleBat(1100, 500, player);
@@ -73,6 +73,7 @@ function startGame() {
       window.onkeydown = "";
       window.onkeyup = "";
       over.style.display = "flex";
+      over.querySelector('#score').innerText = `Score: ${points.innerText}`
       obstacles.forEach((obs) => {
         obs.removeObstacle();
       });
